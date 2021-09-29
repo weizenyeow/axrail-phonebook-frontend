@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Navbar from "./components/Navbar";
-import List from "./components/List";
+import ContactList from "./components/ContactList";
 import Create from "./components/Create";
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <List />
+              <ContactList />
             </Route>
             <Route path="/create">
               <Create />
