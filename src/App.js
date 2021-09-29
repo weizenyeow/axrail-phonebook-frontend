@@ -1,18 +1,16 @@
-import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Navbar from "./components/Navbar";
-import ContactList from "./components/ContactList";
+import Home from "./components/Home";
 import Create from "./components/Create";
 
-class App extends Component {
-  render() {
+function App() {
     return (
       <Router>
         <Navbar />
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <ContactList />
+              <Home />
             </Route>
             <Route path="/create">
               <Create />
@@ -22,6 +20,5 @@ class App extends Component {
       </Router>
     )
   }
-}
 
 export default App;

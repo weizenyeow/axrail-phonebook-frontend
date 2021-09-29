@@ -3,7 +3,7 @@ const Navbar = () => {
         <nav className="navbar">
             <h1>Axrail Phonebook Assessment</h1>
             <div className="links">
-                <a href="/">Contact List</a>
+                <a href="/">Home</a>
                 <a href="/create" style={{
                     color: "white",
                     backgroundColor: "#f1356d",
