@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { domain } from "./config/domain";
+import { domain } from "../config/domain";
 
 const useFetch = (url) => {
     const [data, setData] = useState(null);
@@ -9,7 +9,7 @@ const useFetch = (url) => {
     useEffect(() => {
         const abortCont = new AbortController();
 
-        fetch(domain + "/api" + url, { signal: abortCont.singal })
+        fetch(domain + url, { signal: abortCont.signal })
             .then(res => {
                 if (!res.ok) {
                     throw Error('Could not fetch the data for that resource. Please try again later.');

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { api } from "../services/url";
+import { API } from "../services/url";
 
 
 const CreateContact = () => {
@@ -8,7 +8,6 @@ const CreateContact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const contact = {name, phoneNumber};
-    console.log(api);
   }
 
   return (

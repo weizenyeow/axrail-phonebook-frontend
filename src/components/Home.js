@@ -1,8 +1,9 @@
-import useFetch from '../useFetch';
+import useFetch from "../services/useFetch";
 import ContactList from './ContactList';
+import { API } from '../services/url';
 
 const Home = () => {
-    const { data: contacts, isPending, error } = useFetch('/contacts/');
+    const { data: contacts, isPending, error } = useFetch(API.contact.list);
 
     return (
         <div className="home">

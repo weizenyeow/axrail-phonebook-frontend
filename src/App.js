@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import CreateContact from "./components/CreateContact";
 import ContactDetails from "./components/ContactDetails";
+import { Paths } from './services/url';
 
 function App() {
     return (
@@ -10,13 +11,13 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
-            <Route exact path="/">
+            <Route exact path={Paths.contact.viewContacts}>
               <Home />
             </Route>
-            <Route path="/create">
+            <Route path={Paths.contact.createContact}>
               <CreateContact />
             </Route>
-            <Route path="/contacts/:id">
+            <Route path={Paths.contact.viewContactParams}>
               <ContactDetails />
             </Route>
           </Switch>
