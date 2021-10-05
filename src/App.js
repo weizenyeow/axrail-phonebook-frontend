@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Create from "./components/Create";
+import CreateContact from "./components/CreateContact";
+import ContactDetails from "./components/ContactDetails";
 
 function App() {
     return (
@@ -13,7 +14,10 @@ function App() {
               <Home />
             </Route>
             <Route path="/create">
-              <Create />
+              <CreateContact />
+            </Route>
+            <Route path="/contacts/:id">
+              <ContactDetails />
             </Route>
           </Switch>
         </div>
