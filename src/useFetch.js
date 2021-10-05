@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { domain } from './domain';
+import { domain } from "./config/domain";
 
 const useFetch = (url) => {
     const [data, setData] = useState(null);
